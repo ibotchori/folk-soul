@@ -11,7 +11,9 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <div className='bg-gradient-to-r from-[#342C46] via-[#534571] to-[#342C46]  h-screen w-full'>
+        <App />
+      </div>
     </Provider>
   </React.StrictMode>
 );
