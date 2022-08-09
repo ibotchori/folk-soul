@@ -1,4 +1,4 @@
-import { Landing } from 'pages'
+import { Landing, Login } from 'pages'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -6,6 +6,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Landing />} />
+        <Route path='/login' element={<Login />} />
       </Routes>
     </BrowserRouter>
   )
