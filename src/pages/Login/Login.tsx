@@ -1,4 +1,5 @@
 import React from 'react'
+import Input from './components/Input'
 
 type Props = {}
 
@@ -11,17 +12,8 @@ const Login = (props: Props) => {
             კარიბჭე
           </p>
         </div>
-        <input
-          type='text'
-          className={`bg-[#C3B6B2] text-gray-900 text-sm rounded-md border-gray-300 focus:outline-none focus:border-gray-500 focus:ring-1 focus:ring-gray-500  block  p-4 border w-[300px] placeholder-gray-700 placeholder:text-[16px]`}
-          placeholder='მეტსახელი'
-        />
-        <input
-          type='password'
-          className={`bg-[#C3B6B2] text-gray-900 text-sm rounded-md border-gray-300 focus:outline-none focus:border-gray-500 focus:ring-1 focus:ring-gray-500  block  p-4 border w-[300px] placeholder-gray-700 placeholder:text-[16px]`}
-          placeholder='პაროლი'
-        />
-
+        <Input id='username' placeholder='მეტსახელი' type='text' />
+        <Input id='password' placeholder='პაროლი' type='password' />
         <button className='bg-[#345161] border rounded-md text-gray-300 border-gray-300  w-60 h-14 text-center font-[mtavruli] pt-1 tracking-wider'>
           შემობრძანდი
         </button>
