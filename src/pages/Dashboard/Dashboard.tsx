@@ -1,3 +1,4 @@
+import { TVicon } from 'assets'
 import React from 'react'
 
 type Props = {}
@@ -10,11 +11,7 @@ const Dashboard = (props: Props) => {
         <p className='font-[mtavruli]  text-2xl lg:text-5xl tracking-widest '>
           დილამშვიდობისა!
         </p>
-        <img
-          className=''
-          src='https://www.slazzer.com/static/images/home-page/banner-orignal-image.jpg'
-          alt=''
-        />
+        <img className='' src={TVicon} alt=''></img>
       </div>
     </div>
   )
