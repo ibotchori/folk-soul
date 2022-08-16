@@ -5,13 +5,13 @@ type Props = {}
 
 const Dashboard = (props: Props) => {
   return (
-    <div className='flex justify-end items-center h-screen md:mr-32 mr-16'>
+    <div className='flex justify-center sm:justify-end items-center h-screen sm:mr-32 '>
       {/* Content */}
-      <div className='w-4/6 h-[80vh] bg-white rounded-md flex flex-col justify-evenly  items-center'>
-        <p className='font-[mtavruli]  text-2xl lg:text-5xl tracking-widest '>
+      <div className='w-4/6  sm:h-[60vh] md:h-[80vh]  bg-[#FBFBFB] rounded-2xl flex flex-col justify-evenly items-center shadow-[inset_8px_8px_10px_0_rgba(0,0,0,0.3)]'>
+        <p className='font-[mtavruli] text-xl pt-5   md:text-3xl lg:text-5xl tracking-widest '>
           დილამშვიდობისა!
         </p>
-        <img className='' src={TVicon} alt=''></img>
+        <img className='w-[500px]' src={TVicon} alt='TV_image' />
       </div>
     </div>
   )
