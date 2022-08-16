@@ -1,0 +1,40 @@
+import {
+  DoorIcon,
+  HomeIcon,
+  MemberIcon,
+  MusicalKeyIcon,
+  YoutubeIcon,
+} from 'assets'
+
+export const navButtonsData = [
+  {
+    id: 1,
+    label: 'მთავარი',
+    path: '/dashboard',
+    icon: HomeIcon,
+  },
+  {
+    id: 2,
+    label: 'ჯგუფის წევრები',
+    path: '/members',
+    icon: MemberIcon,
+  },
+  {
+    id: 3,
+    label: 'სოციალური ქსელები',
+    path: '/social-links',
+    icon: YoutubeIcon,
+  },
+  {
+    id: 4,
+    label: 'ბენდის შესახებ',
+    path: '/band-info',
+    icon: MusicalKeyIcon,
+  },
+  {
+    id: 5,
+    label: 'გადი გარეთ',
+    path: '/',
+    icon: DoorIcon,
+  },
+]
