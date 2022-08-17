@@ -1,5 +1,12 @@
 import Layout from 'components/Layout/Layout'
-import { Dashboard, Landing, Login } from 'pages'
+import {
+  BandInfo,
+  Dashboard,
+  Landing,
+  Login,
+  Members,
+  SocialLinks,
+} from 'pages'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -10,6 +17,9 @@ function App() {
           <Route path='/' element={<Landing />} />
           <Route path='/login' element={<Login />} />
           <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/members' element={<Members />} />
+          <Route path='/social-links' element={<SocialLinks />} />
+          <Route path='/band-info' element={<BandInfo />} />
         </Route>
       </Routes>
     </BrowserRouter>

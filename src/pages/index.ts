@@ -1,3 +1,6 @@
 export { default as Landing } from './Landing/Landing'
 export { default as Login } from './Login/Login'
 export { default as Dashboard } from './Dashboard/Dashboard'
+export { default as Members } from './Members/Members'
+export { default as SocialLinks } from './SocialLinks/SocialLinks'
+export { default as BandInfo } from './BandInfo/BandInfo'
