@@ -1,4 +1,4 @@
-import { EditPhotoIcon } from 'assets'
+import { DeleteIcon, EditPhotoIcon, ModifyIcon, SeeIcon } from 'assets'
 import React from 'react'
 
 type Props = {}
@@ -33,7 +33,17 @@ const Members = (props: Props) => {
 
             <p className='font-[mtavruli]'>საბა</p>
             <div className=' w-full text-center h-10 border-t-2 border-black'>
-              Button
+              <div className='flex justify-between px-5 pt-2 items-center'>
+                <button>
+                  <img src={SeeIcon} alt='See Icon' />
+                </button>
+                <button>
+                  <img src={ModifyIcon} alt='Modify Icon' />
+                </button>
+                <button>
+                  <img src={DeleteIcon} alt='Delete Icon' />
+                </button>
+              </div>
             </div>
           </div>
           <div className='bg-sidebarColor w-[13.5rem] h-[17.375rem] rounded-md shadow-[15px_15px_15px_rgba(0,0,0,0.35)] border-2 border-black text-gray-200 flex flex-col justify-between pt-8 items-center'>
@@ -55,7 +65,17 @@ const Members = (props: Props) => {
 
             <p className='font-[mtavruli]'>ვანო</p>
             <div className=' w-full text-center h-10 border-t-2 border-black'>
-              Button
+              <div className='flex justify-between px-5 pt-2 items-center'>
+                <button>
+                  <img src={SeeIcon} alt='See Icon' />
+                </button>
+                <button>
+                  <img src={ModifyIcon} alt='Modify Icon' />
+                </button>
+                <button>
+                  <img src={DeleteIcon} alt='Delete Icon' />
+                </button>
+              </div>
             </div>
           </div>
           <div className='bg-sidebarColor w-[13.5rem] h-[17.375rem] rounded-md shadow-[15px_15px_15px_rgba(0,0,0,0.35)] border-2 border-black text-gray-200 flex flex-col justify-between pt-8 items-center'>
@@ -77,7 +97,17 @@ const Members = (props: Props) => {
 
             <p className='font-[mtavruli]'>ნიკა</p>
             <div className=' w-full text-center h-10 border-t-2 border-black'>
-              Button
+              <div className='flex justify-between px-5 pt-2 items-center'>
+                <button>
+                  <img src={SeeIcon} alt='See Icon' />
+                </button>
+                <button>
+                  <img src={ModifyIcon} alt='Modify Icon' />
+                </button>
+                <button>
+                  <img src={DeleteIcon} alt='Delete Icon' />
+                </button>
+              </div>
             </div>
           </div>
         </div>
