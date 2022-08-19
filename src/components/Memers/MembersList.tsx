@@ -5,11 +5,15 @@ import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
 import ReactPaginate from 'react-paginate'
 import './Pagination.css'
+import useWindowDimensions from 'hooks/useWindowDimensions'
 type Props = {}
 
 const MembersList = (props: Props) => {
+  // Imported  Hook
+  const { height, width } = useWindowDimensions()
+
   const [pageNumber, setPageNumber] = useState(0)
-  const membersPerPage = 3
+  const membersPerPage = width > 1500 ? 3 : width > 1050 ? 2 : 1
 
   const pageVisited = pageNumber * membersPerPage
 
@@ -17,11 +21,11 @@ const MembersList = (props: Props) => {
     .slice(pageVisited, pageVisited + membersPerPage)
     .map((member) => {
       return (
-        <div className='bg-sidebarColor w-[13.5rem] h-[17.375rem] rounded-md shadow-[15px_15px_15px_rgba(0,0,0,0.35)] border-2 border-black text-gray-200 flex flex-col justify-between pt-8 items-center'>
-          <div className='relative w-36 h-36  '>
+        <div className='bg-sidebarColor sm:w-[13.5rem] w-[10.5rem] sm:h-[17.375rem] h-[14.375rem] rounded-md shadow-[15px_15px_15px_rgba(0,0,0,0.35)] border-2 border-black text-gray-200 flex flex-col justify-between pt-8 items-center'>
+          <div className='relative'>
             {/* Avatar Image */}
             <img
-              className='w-36 h-36 rounded-full border-2 border-gray-200 '
+              className='sm:w-36 w-32  sm:h-36 h-32  rounded-full border-2 border-gray-200 '
               src='https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aHVtYW58ZW58MHx8MHx8&w=1000&q=80'
               alt='avatar'
             />
@@ -58,7 +62,9 @@ const MembersList = (props: Props) => {
   }
   return (
     <>
-      <div className='flex justify-between w-[70%]'>{displayMembers}</div>
+      <div className='flex justify-center lg:justify-between w-[70%]'>
+        {displayMembers}
+      </div>
       <ReactPaginate
         pageCount={pageCount}
         onPageChange={changePage}
