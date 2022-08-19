@@ -1,0 +1,31 @@
+.paginationButtons {
+  display: flex;
+  justify-content: center;
+}
+
+.paginationButtons a {
+  padding: 8px 12px;
+  height: 32px;
+  text-align: center;
+  margin: auto 4px;
+  color: white;
+  letter-spacing: 0.01071em;
+  border-radius: 16px;
+  line-height: 1.43;
+  font-size: 13px;
+  min-width: 32px;
+  background-color: rgb(185, 180, 180);
+}
+.paginationButtons a:hover {
+  background-color: rgb(116, 116, 116);
+}
+.paginationActive a {
+  background-color: rgb(116, 116, 116);
+}
+
+.nextButton {
+  display: none;
+}
+.prevButton {
+  display: none;
+}

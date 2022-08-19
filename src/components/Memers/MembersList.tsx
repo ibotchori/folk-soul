@@ -4,6 +4,7 @@ import { members } from './data'
 import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
 import ReactPaginate from 'react-paginate'
+import './Pagination.css'
 type Props = {}
 
 const MembersList = (props: Props) => {
@@ -59,11 +60,12 @@ const MembersList = (props: Props) => {
     <>
       <div className='flex justify-between w-[70%]'>{displayMembers}</div>
       <ReactPaginate
-        breakLabel='...'
-        nextLabel='next >'
-        previousLabel='< previous'
         pageCount={pageCount}
         onPageChange={changePage}
+        containerClassName={'paginationButtons'}
+        activeClassName={'paginationActive'}
+        previousLinkClassName={'prevButton'}
+        nextLinkClassName={'nextButton'}
       />
     </>
   )
