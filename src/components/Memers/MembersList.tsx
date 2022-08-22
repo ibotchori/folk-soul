@@ -1,5 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { DeleteIcon, EditPhotoIcon, ModifyIcon, SeeIcon } from 'assets'
+import {
+  DefaultMemberAvatar,
+  DeleteIcon,
+  EditPhotoIcon,
+  ModifyIcon,
+  SeeIcon,
+} from 'assets'
 import { members } from './data'
 import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
@@ -34,7 +40,7 @@ const MembersList = (props: Props) => {
             {/* Avatar Image */}
             <img
               className='sm:w-36 w-32  sm:h-36 h-32  rounded-full border-2 border-gray-200 '
-              src='https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aHVtYW58ZW58MHx8MHx8&w=1000&q=80'
+              src={DefaultMemberAvatar}
               alt='avatar'
             />
 

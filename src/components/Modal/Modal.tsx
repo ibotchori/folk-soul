@@ -1,4 +1,4 @@
-import { CloseIcon } from 'assets'
+import { CloseIcon, DefaultMemberAvatar } from 'assets'
 import React, { MouseEventHandler } from 'react'
 
 type ModalProps = {
@@ -29,7 +29,7 @@ const Modal: React.FC<ModalProps> = ({ visible, onClose }) => {
           <div className='relative pb-8'>
             <img
               className=' shadow-[15px_15px_15px_rgba(0,0,0,0.35)]  md:w-52 w-32  md:h-52 h-32  rounded-full border-2 border-gray-200 '
-              src='https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aHVtYW58ZW58MHx8MHx8&w=1000&q=80'
+              src={DefaultMemberAvatar}
               alt='avatar'
             />
           </div>
