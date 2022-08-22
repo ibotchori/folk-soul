@@ -1,6 +1,5 @@
 import React from 'react'
 import MembersList from 'components/Memers/MembersList'
-import Modal from 'components/Modal/Modal'
 
 type Props = {}
 
@@ -25,7 +24,6 @@ const Members = (props: Props) => {
           </button>
         </div>
       </div>
-      <Modal />
     </>
   )
 }

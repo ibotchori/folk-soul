@@ -1,16 +1,23 @@
 import { CloseIcon } from 'assets'
-import React from 'react'
+import React, { MouseEventHandler } from 'react'
 
-type Props = {}
+type ModalProps = {
+  visible: boolean
+  onClose: MouseEventHandler<HTMLButtonElement>
+}
 
-const Modal = (props: Props) => {
+const Modal: React.FC<ModalProps> = ({ visible, onClose }) => {
+  if (!visible) return null
   return (
     <div className='fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center'>
       <div className='flex justify-center items-center h-screen w-full '>
         {/* Content */}
         <div className='md:max-w-[30%] w-[70%] h-[50vh]  md:h-[60vh]   bg-[#FBFBFB] rounded-xl flex flex-col justify-between items-center relative '>
           {/* Modal close button */}
-          <button className='w-full flex justify-end pr-4 top-0 pt-4 absolute'>
+          <button
+            onClick={onClose}
+            className='w-full flex justify-end pr-4 top-0 pt-4 absolute'
+          >
             <img className='md:w-7 w-4' src={CloseIcon} alt='' />
           </button>
           {/* Title */}

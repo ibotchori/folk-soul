@@ -6,9 +6,17 @@ import ReactDOM from 'react-dom'
 import ReactPaginate from 'react-paginate'
 import './Pagination.css'
 import useWindowDimensions from 'hooks/useWindowDimensions'
+import Modal from 'components/Modal/Modal'
 type Props = {}
 
 const MembersList = (props: Props) => {
+  /* Modal Functionality */
+  const [showModal, setShowModal] = useState(false)
+  const handleOnClose = () => {
+    setShowModal(false)
+  }
+  /* END Modal Functionality */
+
   // Imported  Hook
   const { height, width } = useWindowDimensions()
 
@@ -32,6 +40,7 @@ const MembersList = (props: Props) => {
 
             {/* Avatar Edit Button */}
             <img
+              onClick={() => setShowModal(true)}
               className='absolute bottom-0 right-0 cursor-pointer pr-3'
               src={EditPhotoIcon}
               alt='Edit'
@@ -73,6 +82,7 @@ const MembersList = (props: Props) => {
         previousLinkClassName={'prevButton'}
         nextLinkClassName={'nextButton'}
       />
+      <Modal onClose={handleOnClose} visible={showModal} />
     </>
   )
 }
