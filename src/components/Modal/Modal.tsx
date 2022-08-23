@@ -1,4 +1,5 @@
 import { CloseIcon, DefaultMemberAvatar } from 'assets'
+import Button from 'components/Button/Button'
 import React, { MouseEventHandler } from 'react'
 
 type ModalProps = {
@@ -38,11 +39,7 @@ const Modal: React.FC<ModalProps> = ({ visible, onClose }) => {
             />
           </div>
           {/* Upload button */}
-          <button className=' w-32 md:w-40 h-10 bg-[#143B52] rounded-lg mb-5 md:mb-20 '>
-            <p className='font-[mtavruli] text-center text-sm md:text-lg pt-1 tracking-widest text-gray-200 hover:text-gray-300    '>
-              ატვირთე
-            </p>
-          </button>
+          <Button text='ატვირთე' backgroundColor='primaryBG' />
         </div>
       </div>
     </div>

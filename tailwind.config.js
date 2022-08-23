@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         sidebarColor: '#333',
+        primaryBG: '#143B52',
       },
     },
   },
