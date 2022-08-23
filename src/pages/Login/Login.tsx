@@ -5,8 +5,8 @@ type Props = {}
 
 const Login = (props: Props) => {
   return (
-    <div className='  items-center justify-center flex h-full'>
-      <div className='bg-gradient-to-t  from-[#7b5a5a] to-[#345161]   border rounded-sm  border-gray-200 w-[380px] h-[430px] items-center flex justify-evenly flex-col'>
+    <div className='  items-center justify-center flex w-full h-full'>
+      <div className='bg-gradient-to-t  from-[#7b5a5a] to-[#345161]   border rounded-sm  border-gray-200 w-[21rem] sm:w-[25rem] h-[27rem] items-center flex justify-evenly flex-col'>
         <div className='bg-[#EB5757] w-40 h-12 text-center skew-x-[-40deg]'>
           <p className='skew-x-[40deg] font-[mtavruli] font-bold pt-3 pr-2 text-md'>
             კარიბჭე
