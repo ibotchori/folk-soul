@@ -5,6 +5,7 @@ import {
   Landing,
   Login,
   Members,
+  NewMember,
   SocialLinks,
 } from 'pages'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -20,6 +21,7 @@ function App() {
           <Route path='/members' element={<Members />} />
           <Route path='/social-links' element={<SocialLinks />} />
           <Route path='/band-info' element={<BandInfo />} />
+          <Route path='/new-member' element={<NewMember />} />
         </Route>
       </Routes>
     </BrowserRouter>
