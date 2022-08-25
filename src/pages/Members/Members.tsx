@@ -18,14 +18,11 @@ const Members = (props: Props) => {
           {/* Members */}
           <MembersList />
           {/* Add new member button */}
-          <button>
-            {' '}
-            <p
-              onClick={() => navigate('/members/new')}
-              className='font-[mtavruli] text-[#3A7DA3] underline tracking-widest font-bold text-lg'
-            >
-              ახალი წევრი გყავს?
-            </p>
+          <button
+            onClick={() => navigate('/members/new')}
+            className='font-[mtavruli] text-[#3A7DA3] underline tracking-widest font-bold text-lg'
+          >
+            ახალი წევრი გყავს?
           </button>
         </div>
       </div>
