@@ -1,11 +1,10 @@
 import Button from 'components/Button/Button'
+import GoBackButton from 'components/Button/GoBackButton'
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 
 type Props = {}
 
 const NewMember = (props: Props) => {
-  const navigate = useNavigate()
   return (
     <div className='flex justify-center md:justify-end items-center h-screen md:mr-24 w-full '>
       {/* Content */}
@@ -18,12 +17,7 @@ const NewMember = (props: Props) => {
 
         {/* Add new member button */}
         <Button text='დაამატე წევრი' backgroundColor='primaryBG' />
-        <button
-          onClick={() => navigate('/members')}
-          className='font-[mtavruli] text-[#3A7DA3] underline tracking-widest font-bold text-lg'
-        >
-          გადი უკან
-        </button>
+        <GoBackButton />
       </div>
     </div>
   )
