@@ -13,11 +13,19 @@ const NewMember = (props: Props) => {
         <p className='font-[mtavruli] text-lg  tracking-widest  w-[80%] text-center border-b-2 border-gray-600 pb-5 '>
           დაამატე ჯგუფის ახელი წევრი
         </p>
-        {/* Members */}
+        {/* Form */}
+        <div>
+          <input className='border border-gray-500' type='text' />
+          <input className='border border-gray-500' type='text' />
+          <input className='border border-gray-500' type='color' />
+          <input className='border border-gray-500' type='text' />
+        </div>
 
         {/* Add new member button */}
-        <Button text='დაამატე წევრი' backgroundColor='primaryBG' />
-        <GoBackButton />
+        <div className='flex flex-col'>
+          <Button text='დაამატე წევრი' backgroundColor='primaryBG' />
+          <GoBackButton />
+        </div>
       </div>
     </div>
   )
