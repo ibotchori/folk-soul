@@ -1,9 +1,11 @@
 import React from 'react'
 import MembersList from 'components/Memers/MembersList'
+import { useNavigate } from 'react-router-dom'
 
 type Props = {}
 
 const Members = (props: Props) => {
+  const navigate = useNavigate()
   return (
     <>
       <div className='flex justify-center md:justify-end items-center h-screen md:mr-24 w-full '>
@@ -18,7 +20,10 @@ const Members = (props: Props) => {
           {/* Add new member button */}
           <button>
             {' '}
-            <p className='font-[mtavruli] text-[#3A7DA3] underline tracking-widest font-bold text-lg'>
+            <p
+              onClick={() => navigate('/members/new')}
+              className='font-[mtavruli] text-[#3A7DA3] underline tracking-widest font-bold text-lg'
+            >
               ახალი წევრი გყავს?
             </p>
           </button>

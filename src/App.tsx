@@ -19,9 +19,9 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/members' element={<Members />} />
+          <Route path='/members/new' element={<NewMember />} />
           <Route path='/social-links' element={<SocialLinks />} />
           <Route path='/band-info' element={<BandInfo />} />
-          <Route path='/new-member' element={<NewMember />} />
         </Route>
       </Routes>
     </BrowserRouter>

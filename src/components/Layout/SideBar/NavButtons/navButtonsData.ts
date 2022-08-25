@@ -17,6 +17,7 @@ export const navButtonsData = [
     id: 2,
     label: 'ჯგუფის წევრები',
     path: '/members',
+    nestedPath: '/members/new',
     icon: MemberIcon,
   },
   {

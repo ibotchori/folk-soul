@@ -12,7 +12,10 @@ const NavItemsList = (props: Props) => {
           <Link
             to={navItem.path}
             className={`flex items-center w-full h-[3rem] pl-6 pt-[0.4rem] hover:bg-white hover:text-black  ${
-              location.pathname === navItem.path ? 'bg-white text-black' : ''
+              location.pathname === navItem.path ||
+              location.pathname === navItem.nestedPath
+                ? 'bg-white text-black'
+                : ''
             }  `}
           >
             <div className='w-11 flex justify-center'>
