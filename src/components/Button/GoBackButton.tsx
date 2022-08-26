@@ -8,7 +8,7 @@ const GoBackButton = (props: Props) => {
   return (
     <button
       onClick={() => navigate(-1)}
-      className='font-[mtavruli] text-[#3A7DA3] underline tracking-widest font-bold text-lg'
+      className='font-[mtavruli] hover:text-[#55a5d3] text-[#3A7DA3] underline tracking-widest font-bold text-lg'
     >
       გადი უკან
     </button>

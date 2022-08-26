@@ -20,7 +20,7 @@ const Members = (props: Props) => {
           {/* Add new member button */}
           <button
             onClick={() => navigate('/members/new')}
-            className='font-[mtavruli] text-[#3A7DA3] underline tracking-widest font-bold text-lg'
+            className='font-[mtavruli] hover:text-[#55a5d3] text-[#3A7DA3] underline tracking-widest font-bold text-lg'
           >
             ახალი წევრი გყავს?
           </button>
