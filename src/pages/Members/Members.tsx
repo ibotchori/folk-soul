@@ -1,5 +1,5 @@
 import React from 'react'
-import MembersList from 'components/Memers/MembersList'
+import MembersList from 'components/Members/MembersList'
 import { useNavigate } from 'react-router-dom'
 
 type Props = {}
