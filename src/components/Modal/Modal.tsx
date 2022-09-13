@@ -39,7 +39,7 @@ const Modal: React.FC<ModalProps> = ({ visible, onClose }) => {
             />
           </div>
           {/* Upload button */}
-          <Button text='ატვირთე' backgroundColor='primaryBG' />
+          <Button text='ატვირთე' backgroundColor='bg-primaryBG' />
         </div>
       </div>
     </div>

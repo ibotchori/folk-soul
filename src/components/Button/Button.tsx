@@ -8,7 +8,7 @@ type ButtonProps = {
 const Button: React.FC<ButtonProps> = ({ text, backgroundColor }) => {
   return (
     <button
-      className={`px-8 h-12 bg-${backgroundColor} rounded-lg  font-[mtavruli] text-center text-sm md:text-lg pt-1 tracking-widest text-gray-200 hover:text-gray-100`}
+      className={`px-8 h-12 ${backgroundColor} rounded-lg  font-[mtavruli] text-center text-sm md:text-lg pt-1 tracking-widest text-gray-200 hover:text-gray-100`}
     >
       {text}
     </button>
