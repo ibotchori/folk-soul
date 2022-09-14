@@ -24,6 +24,7 @@ export const navButtonsData = [
     id: 3,
     label: 'სოციალური ქსელები',
     path: '/social-links',
+    nestedPath: '/social-links/new',
     icon: YoutubeIcon,
   },
   {
