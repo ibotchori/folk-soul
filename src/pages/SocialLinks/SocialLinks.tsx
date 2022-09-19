@@ -1,4 +1,4 @@
-import { DeleteIcon, ModifyIcon } from 'assets'
+import { DeleteIcon, EditPhotoIcon, Youtube, ModifyIcon } from 'assets'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
@@ -15,8 +15,21 @@ const SocialLinks = (props: Props) => {
           სოციალური ბმულები
         </p>
         {/* Social Links */}
-        <div className='flex h-16 bg-sidebarColor w-[70%] rounded-md shadow-[7px_7px_7px_rgba(0,0,0,0.35)] justify-between items-center '>
-          <img src='' alt='' />
+        <div className='flex h-16 px-5 bg-sidebarColor w-[70%] rounded-md shadow-[7px_7px_7px_rgba(0,0,0,0.35)] justify-between items-center '>
+          <div className=' w-16 flex relative'>
+            <div className=''>
+              {/* Social Link image */}
+              <img src={Youtube} alt='avatar' />
+            </div>
+            {/* Edit Button */}
+            <div className='absolute  mt-4 ml-7 '>
+              <img
+                className='w-5  h-5 cursor-pointer'
+                src={EditPhotoIcon}
+                alt='Edit'
+              />
+            </div>
+          </div>
           <p className='text-white'>YouTube</p>
           <a
             className='text-[#2F80ED] underline'
@@ -24,7 +37,7 @@ const SocialLinks = (props: Props) => {
           >
             https://www.youtube.com/
           </a>
-          <div className='px-5 pt-2 items-center pr-5 '>
+          <div className=' pt-2 items-center '>
             <button className='pr-20'>
               <img src={ModifyIcon} alt='Modify Icon' />
             </button>
