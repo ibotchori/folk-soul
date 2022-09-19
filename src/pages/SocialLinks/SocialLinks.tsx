@@ -1,8 +1,10 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 type Props = {}
 
 const SocialLinks = (props: Props) => {
+  const navigate = useNavigate()
   return (
     <div className='flex justify-center md:justify-end items-center h-screen md:mr-24 w-full '>
       {/* Content */}
@@ -13,8 +15,11 @@ const SocialLinks = (props: Props) => {
         </p>
         {/* Social Links */}
 
-        {/* Add new member button */}
-        <button className='font-[mtavruli] hover:text-[#55a5d3] text-[#3A7DA3] underline tracking-widest font-bold text-lg'>
+        {/* Add new Social Link button */}
+        <button
+          onClick={() => navigate('/social-links/new')}
+          className='font-[mtavruli] hover:text-[#55a5d3] text-[#3A7DA3] underline tracking-widest font-bold text-lg'
+        >
           დაამატე ახალი სოციალური ბმული
         </button>
       </div>
