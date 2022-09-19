@@ -1,4 +1,11 @@
-import { DeleteIcon, EditPhotoIcon, Youtube, ModifyIcon } from 'assets'
+import {
+  DeleteIcon,
+  EditPhotoIcon,
+  Youtube,
+  ModifyIcon,
+  FacebookTransparent,
+  Twitter,
+} from 'assets'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
@@ -36,6 +43,68 @@ const SocialLinks = (props: Props) => {
             href='https://www.youtube.com/'
           >
             https://www.youtube.com/
+          </a>
+          <div className=' pt-2 items-center '>
+            <button className='pr-20'>
+              <img src={ModifyIcon} alt='Modify Icon' />
+            </button>
+            <button>
+              <img src={DeleteIcon} alt='Delete Icon' />
+            </button>
+          </div>
+        </div>
+        <div className='flex h-16 px-5 bg-sidebarColor w-[70%] rounded-md shadow-[7px_7px_7px_rgba(0,0,0,0.35)] justify-between items-center '>
+          <div className=' w-16 flex relative'>
+            <div className=''>
+              {/* Social Link image */}
+              <img src={FacebookTransparent} alt='avatar' />
+            </div>
+            {/* Edit Button */}
+            <div className='absolute  mt-4 ml-7 '>
+              <img
+                className='w-5  h-5 cursor-pointer'
+                src={EditPhotoIcon}
+                alt='Edit'
+              />
+            </div>
+          </div>
+          <p className='text-white'>Facebook</p>
+          <a
+            className='text-[#2F80ED] underline'
+            href='https://www.facebook.com/'
+          >
+            https://www.facebook.com/
+          </a>
+          <div className=' pt-2 items-center '>
+            <button className='pr-20'>
+              <img src={ModifyIcon} alt='Modify Icon' />
+            </button>
+            <button>
+              <img src={DeleteIcon} alt='Delete Icon' />
+            </button>
+          </div>
+        </div>
+        <div className='flex h-16 px-5 bg-sidebarColor w-[70%] rounded-md shadow-[7px_7px_7px_rgba(0,0,0,0.35)] justify-between items-center '>
+          <div className=' w-16 flex relative'>
+            <div className=''>
+              {/* Social Link image */}
+              <img src={Twitter} alt='avatar' />
+            </div>
+            {/* Edit Button */}
+            <div className='absolute  mt-4 ml-7 '>
+              <img
+                className='w-5  h-5 cursor-pointer'
+                src={EditPhotoIcon}
+                alt='Edit'
+              />
+            </div>
+          </div>
+          <p className='text-white'>Twitter</p>
+          <a
+            className='text-[#2F80ED] underline'
+            href='https://www.twitter.com/'
+          >
+            https://www.twitter.com/
           </a>
           <div className=' pt-2 items-center '>
             <button className='pr-20'>

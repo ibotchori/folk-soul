@@ -1,6 +1,7 @@
 export { default as BandLogo } from './images/bandLogo.png'
 export { default as BandImage } from './images/bandImage.png'
 export { default as Facebook } from './images/social-links/facebook.png'
+export { default as FacebookTransparent } from './images/social-links/facebook-transparent.png'
 export { default as Twitter } from './images/social-links/twitter.png'
 export { default as Youtube } from './images/social-links/youtube.png'
 export { default as TVicon } from './images/TV.png'
