@@ -1,3 +1,4 @@
+import { ModifyIcon, SeeIcon } from 'assets'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
@@ -14,6 +15,19 @@ const SocialLinks = (props: Props) => {
           სოციალური ბმულები
         </p>
         {/* Social Links */}
+        <div className='flex h-16 bg-sidebarColor w-[70%] rounded-md shadow-[7px_7px_7px_rgba(0,0,0,0.35)] '>
+          <img src='' alt='' />
+          <p className='text-white'>YouTube</p>
+          <p>https://www.youtube.com/</p>
+          <div className='flex justify-between px-5 pt-2 items-center'>
+            <button>
+              <img src={SeeIcon} alt='See Icon' />
+            </button>
+            <button>
+              <img src={ModifyIcon} alt='Modify Icon' />
+            </button>
+          </div>
+        </div>
 
         {/* Add new Social Link button */}
         <button
