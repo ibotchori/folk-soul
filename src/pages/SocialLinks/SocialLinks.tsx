@@ -1,4 +1,4 @@
-import { ModifyIcon, SeeIcon } from 'assets'
+import { DeleteIcon, ModifyIcon } from 'assets'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
@@ -15,16 +15,21 @@ const SocialLinks = (props: Props) => {
           სოციალური ბმულები
         </p>
         {/* Social Links */}
-        <div className='flex h-16 bg-sidebarColor w-[70%] rounded-md shadow-[7px_7px_7px_rgba(0,0,0,0.35)] '>
+        <div className='flex h-16 bg-sidebarColor w-[70%] rounded-md shadow-[7px_7px_7px_rgba(0,0,0,0.35)] justify-between items-center '>
           <img src='' alt='' />
           <p className='text-white'>YouTube</p>
-          <p>https://www.youtube.com/</p>
-          <div className='flex justify-between px-5 pt-2 items-center'>
-            <button>
-              <img src={SeeIcon} alt='See Icon' />
+          <a
+            className='text-[#2F80ED] underline'
+            href='https://www.youtube.com/'
+          >
+            https://www.youtube.com/
+          </a>
+          <div className='px-5 pt-2 items-center pr-5 '>
+            <button className='pr-20'>
+              <img src={ModifyIcon} alt='Modify Icon' />
             </button>
             <button>
-              <img src={ModifyIcon} alt='Modify Icon' />
+              <img src={DeleteIcon} alt='Delete Icon' />
             </button>
           </div>
         </div>
