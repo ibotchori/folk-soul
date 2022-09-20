@@ -24,18 +24,14 @@ const SocialLinks = (props: Props) => {
         {/* Social Links */}
         <div className='flex h-16 px-5 bg-sidebarColor w-[70%] rounded-md shadow-[7px_7px_7px_rgba(0,0,0,0.35)] justify-between items-center '>
           <div className=' w-16 flex relative'>
-            <div className=''>
-              {/* Social Link image */}
-              <img src={Youtube} alt='avatar' />
-            </div>
+            {/* Social Link image */}
+            <img src={Youtube} alt='avatar' />
             {/* Edit Button */}
-            <div className='absolute  mt-4 ml-7 '>
-              <img
-                className='w-5  h-5 cursor-pointer'
-                src={EditPhotoIcon}
-                alt='Edit'
-              />
-            </div>
+            <img
+              className='w-5  h-5 cursor-pointer absolute  mt-4 ml-7 '
+              src={EditPhotoIcon}
+              alt='Edit'
+            />
           </div>
           <p className='text-white'>YouTube</p>
           <a
@@ -55,18 +51,16 @@ const SocialLinks = (props: Props) => {
         </div>
         <div className='flex h-16 px-5 bg-sidebarColor w-[70%] rounded-md shadow-[7px_7px_7px_rgba(0,0,0,0.35)] justify-between items-center '>
           <div className=' w-16 flex relative'>
-            <div className=''>
-              {/* Social Link image */}
-              <img src={FacebookTransparent} alt='avatar' />
-            </div>
+            {/* Social Link image */}
+            <img src={FacebookTransparent} alt='avatar' />
+
             {/* Edit Button */}
-            <div className='absolute  mt-4 ml-7 '>
-              <img
-                className='w-5  h-5 cursor-pointer'
-                src={EditPhotoIcon}
-                alt='Edit'
-              />
-            </div>
+
+            <img
+              className='w-5  h-5 cursor-pointer absolute  mt-4 ml-7 '
+              src={EditPhotoIcon}
+              alt='Edit'
+            />
           </div>
           <p className='text-white'>Facebook</p>
           <a
@@ -86,18 +80,14 @@ const SocialLinks = (props: Props) => {
         </div>
         <div className='flex h-16 px-5 bg-sidebarColor w-[70%] rounded-md shadow-[7px_7px_7px_rgba(0,0,0,0.35)] justify-between items-center '>
           <div className=' w-16 flex relative'>
-            <div className=''>
-              {/* Social Link image */}
-              <img src={Twitter} alt='avatar' />
-            </div>
+            {/* Social Link image */}
+            <img src={Twitter} alt='avatar' />
             {/* Edit Button */}
-            <div className='absolute  mt-4 ml-7 '>
-              <img
-                className='w-5  h-5 cursor-pointer'
-                src={EditPhotoIcon}
-                alt='Edit'
-              />
-            </div>
+            <img
+              className='w-5  h-5 cursor-pointer absolute  mt-4 ml-7'
+              src={EditPhotoIcon}
+              alt='Edit'
+            />
           </div>
           <p className='text-white'>Twitter</p>
           <a
