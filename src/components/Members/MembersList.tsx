@@ -88,7 +88,11 @@ const MembersList = (props: Props) => {
         previousLinkClassName={'prevButton'}
         nextLinkClassName={'nextButton'}
       />
-      <Modal onClose={handleOnClose} visible={showModal} />
+      <Modal
+        onClose={handleOnClose}
+        visible={showModal}
+        title={'შეცვალე ჯგუფის წევრის ავატარი'}
+      />
     </>
   )
 }
