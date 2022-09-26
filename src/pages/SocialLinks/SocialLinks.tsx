@@ -129,6 +129,7 @@ const SocialLinks = (props: Props) => {
       </div>
       <Modal
         onClose={handleOnClose}
+        image={Youtube}
         visible={showModal}
         title={'შეცვალე სოციალური ბმულის ხატულა'}
         subTitle={'YouTube'}

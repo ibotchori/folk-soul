@@ -1,4 +1,4 @@
-import { CloseIcon, DefaultMemberAvatar } from 'assets'
+import { CloseIcon } from 'assets'
 import Button from 'components/Button/Button'
 import React, { MouseEventHandler } from 'react'
 
@@ -7,9 +7,16 @@ type ModalProps = {
   onClose: MouseEventHandler<HTMLButtonElement>
   title: string
   subTitle?: string
+  image?: any
 }
 
-const Modal: React.FC<ModalProps> = ({ title, subTitle, visible, onClose }) => {
+const Modal: React.FC<ModalProps> = ({
+  title,
+  subTitle,
+  image,
+  visible,
+  onClose,
+}) => {
   if (!visible) return null
   return (
     <div className='fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center'>
@@ -38,7 +45,7 @@ const Modal: React.FC<ModalProps> = ({ title, subTitle, visible, onClose }) => {
           <div className='relative pb-8'>
             <img
               className=' shadow-[15px_15px_15px_rgba(0,0,0,0.35)]  md:w-52 w-32  md:h-52 h-32  rounded-full border-2 border-gray-200 '
-              src={DefaultMemberAvatar}
+              src={image}
               alt='avatar'
             />
           </div>
