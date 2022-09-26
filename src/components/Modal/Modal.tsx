@@ -6,9 +6,10 @@ type ModalProps = {
   visible: boolean
   onClose: MouseEventHandler<HTMLButtonElement>
   title: string
+  subTitle?: string
 }
 
-const Modal: React.FC<ModalProps> = ({ title, visible, onClose }) => {
+const Modal: React.FC<ModalProps> = ({ title, subTitle, visible, onClose }) => {
   if (!visible) return null
   return (
     <div className='fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center'>
@@ -30,6 +31,8 @@ const Modal: React.FC<ModalProps> = ({ title, visible, onClose }) => {
           <p className='font-[mtavruli] w-[85%] text-center text-xs md:text-lg pt-14 tracking-widest border-b-2 border-gray-400 '>
             {title}
           </p>
+          {/* Sub Title */}
+          <p className=''>{subTitle}</p>
 
           {/* Avatar Image */}
           <div className='relative pb-8'>
