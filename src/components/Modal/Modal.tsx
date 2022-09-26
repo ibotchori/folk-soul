@@ -8,11 +8,13 @@ type ModalProps = {
   title: string
   subTitle?: string
   image?: any
+  className?: string
 }
 
 const Modal: React.FC<ModalProps> = ({
   title,
   subTitle,
+  className,
   image,
   visible,
   onClose,
@@ -44,7 +46,7 @@ const Modal: React.FC<ModalProps> = ({
           {/* Avatar Image */}
           <div className='relative pb-8'>
             <img
-              className=' shadow-[15px_15px_15px_rgba(0,0,0,0.35)]  md:w-52 w-32  md:h-52 h-32  rounded-full border-2 border-gray-200 '
+              className={`shadow-[15px_15px_15px_rgba(0,0,0,0.35)]  md:w-52 w-32  md:h-52 h-32  border-2 border-gray-200 ${className}`}
               src={image}
               alt='avatar'
             />

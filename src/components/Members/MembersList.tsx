@@ -91,6 +91,7 @@ const MembersList = (props: Props) => {
       <Modal
         onClose={handleOnClose}
         image={DefaultMemberAvatar}
+        className='rounded-full'
         visible={showModal}
         title={'შეცვალე ჯგუფის წევრის ავატარი'}
       />
