@@ -5,5 +5,5 @@ export const members = [
   { title: 'უჩა' },
   { title: 'ირაკლი' },
   { title: 'ოთარი' },
-  { title: 'მახო' },
+  /* { title: 'მახო' }, */
 ]
