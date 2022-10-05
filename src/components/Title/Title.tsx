@@ -8,7 +8,7 @@ type TitleProps = {
 const Title: React.FC<TitleProps> = ({ text, className }) => {
   return (
     <p
-      className={`${className} font-[mtavruli] text-lg  tracking-widest  w-[80%] text-center border-b-2 border-gray-600 pb-5 `}
+      className={`${className} font-[mtavruli]   tracking-widest  w-[80%] text-center border-b-2 border-gray-600 pb-5 `}
     >
       {text}
     </p>
