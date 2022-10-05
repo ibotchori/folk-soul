@@ -7,6 +7,7 @@ import {
   Twitter,
 } from 'assets'
 import Modal from 'components/Modal/Modal'
+import Title from 'components/Title/Title'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
@@ -27,9 +28,7 @@ const SocialLinks = (props: Props) => {
         {/* Content */}
         <div className='w-[77%]  h-[70vh] md:h-[80vh]  bg-[#FBFBFB] rounded-2xl flex flex-col justify-evenly items-center shadow-[inset_8px_8px_10px_0_rgba(0,0,0,0.3)]'>
           {/* Title */}
-          <p className='font-[mtavruli] text-lg  tracking-widest  w-[80%] text-center border-b-2 border-gray-600 pb-5 '>
-            სოციალური ბმულები
-          </p>
+          <Title text='სოციალური ბმულები' />
           {/* Social Links */}
           <div className='flex h-16 px-5 bg-sidebarColor w-[70%] rounded-md shadow-[7px_7px_7px_rgba(0,0,0,0.35)] justify-between items-center '>
             <div className=' w-16 flex relative'>
