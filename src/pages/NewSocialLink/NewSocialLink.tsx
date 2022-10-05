@@ -12,7 +12,7 @@ const NewSocialLink = (props: Props) => {
       <div className='w-[77%]  h-[70vh] md:h-[80vh]  bg-[#FBFBFB] rounded-2xl flex flex-col justify-between items-center shadow-[inset_8px_8px_10px_0_rgba(0,0,0,0.3)]'>
         {/* Title */}
         <Title
-          className='pb-5 pt-10 text-xs md:text-lg'
+          className='pb-5 pt-16 text-xs md:text-lg'
           text='დაამატე სოციალური ბმული'
         />
         {/* Form */}
