@@ -1,8 +1,4 @@
-import Button from 'components/Button/Button'
-import GoBackButton from 'components/Button/GoBackButton'
-import Input from 'components/Input/Input'
-import Title from 'components/Title/Title'
-import React from 'react'
+import { Button, GoBackButton, Input, Title } from 'components'
 
 type Props = {}
 

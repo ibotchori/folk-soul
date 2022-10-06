@@ -6,8 +6,7 @@ import {
   FacebookTransparent,
   Twitter,
 } from 'assets'
-import Modal from 'components/Modal/Modal'
-import Title from 'components/Title/Title'
+import { Modal, Title } from 'components'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 

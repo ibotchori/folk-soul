@@ -1,7 +1,6 @@
+import { MembersList, Title } from 'components'
 import React from 'react'
-import MembersList from 'components/Members/MembersList'
 import { useNavigate } from 'react-router-dom'
-import Title from 'components/Title/Title'
 
 type Props = {}
 
