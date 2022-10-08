@@ -10,7 +10,7 @@ const Landing = (props: Props) => {
       {/* Header */}
       <section className='flex justify-between '>
         <img src={BandLogo} alt='Band-Logo' className='w-32 ' />
-        <Link to={''} className='text-gray-300 pt-4 font-[mtavruli]'>
+        <Link to='/members' className='text-gray-300 pt-4 font-[mtavruli]'>
           შესვლა
         </Link>
       </section>
