@@ -6,14 +6,12 @@ import {
   FacebookTransparent,
   Twitter,
 } from 'assets'
-import { Modal, Title } from 'components'
+import { LinkButton, Modal, Title } from 'components'
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 
 type Props = {}
 
 const SocialLinks = (props: Props) => {
-  const navigate = useNavigate()
   /* Modal Functionality */
   const [showModal, setShowModal] = useState(false)
   const handleOnClose = () => {
@@ -117,12 +115,10 @@ const SocialLinks = (props: Props) => {
           </div>
 
           {/* Add new Social Link button */}
-          <button
-            onClick={() => navigate('/social-links/new')}
-            className='font-[mtavruli] hover:text-[#55a5d3] text-[#3A7DA3] underline tracking-widest font-bold text-lg'
-          >
-            დაამატე ახალი სოციალური ბმული
-          </button>
+          <LinkButton
+            text='დაამატე ახალი სოციალური ბმული'
+            path={'/social-links/new'}
+          />
         </div>
       </div>
       <Modal

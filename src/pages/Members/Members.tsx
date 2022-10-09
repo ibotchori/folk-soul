@@ -1,11 +1,9 @@
-import { MembersList, Title } from 'components'
+import { LinkButton, MembersList, Title } from 'components'
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 
 type Props = {}
 
 const Members = (props: Props) => {
-  const navigate = useNavigate()
   return (
     <>
       <div className='flex justify-center md:justify-end items-center h-screen md:mr-24 w-full '>
@@ -16,12 +14,7 @@ const Members = (props: Props) => {
           {/* Members */}
           <MembersList />
           {/* Add new member button */}
-          <button
-            onClick={() => navigate('/members/new')}
-            className='font-[mtavruli] hover:text-[#55a5d3] text-[#3A7DA3] underline tracking-widest font-bold text-lg'
-          >
-            ახალი წევრი გყავს?
-          </button>
+          <LinkButton text='ახალი წევრი გყავს?' path={'/members/new'} />
         </div>
       </div>
     </>
