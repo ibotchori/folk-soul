@@ -1,4 +1,4 @@
-import { Button, GoBackButton, Input, Title } from 'components'
+import { Button, LinkButton, Input, Title } from 'components'
 
 type Props = {}
 
@@ -27,7 +27,7 @@ const NewSocialLink = (props: Props) => {
             text='დაამატე სოციალური ბმული'
             backgroundColor='bg-primaryBG'
           />
-          <GoBackButton className='pt-8' />
+          <LinkButton text='გადი უკან' className='pt-8' path={-1} />
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { Button, GoBackButton, Input, Title } from 'components'
+import { Button, LinkButton, Input, Title } from 'components'
 
 type Props = {}
 
@@ -35,7 +35,7 @@ const NewMember = (props: Props) => {
         {/* Add new member button */}
         <div className='flex flex-col gap-3 pb-3 md:pb-10'>
           <Button text='დაამატე წევრი' backgroundColor='bg-primaryBG' />
-          <GoBackButton />
+          <LinkButton text='გადი უკან' path={-1} />
         </div>
       </div>
     </div>
