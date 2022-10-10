@@ -1,3 +1,4 @@
+import { DefaultMemberAvatar, EditPhotoIcon } from 'assets'
 import React from 'react'
 
 type Props = {}
@@ -13,6 +14,21 @@ const BandInfo = (props: Props) => {
             ბენდის შესახებ
           </p>
           {/* Image */}
+          <div className='relative'>
+            {/* Avatar Image */}
+            <img
+              className='sm:w-36 w-32  sm:h-36 h-32  rounded-full border-2 border-gray-200 '
+              src={DefaultMemberAvatar}
+              alt='avatar'
+            />
+
+            {/* Avatar Edit Button */}
+            <img
+              className='absolute bottom-0 right-0 cursor-pointer pr-3'
+              src={EditPhotoIcon}
+              alt='Edit'
+            />
+          </div>
 
           {/* Info */}
           <p>
