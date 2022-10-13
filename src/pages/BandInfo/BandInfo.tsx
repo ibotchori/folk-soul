@@ -17,14 +17,14 @@ const BandInfo = (props: Props) => {
           <div className='relative mb-5 '>
             {/* Avatar Image */}
             <img
-              className='sm:w-44 w-32  sm:h-44 h-32  rounded-full border-2 border-gray-200  '
+              className='sm:w-44 w-32  sm:h-44 h-32  rounded-full border-2 border-gray-200   '
               src={DefaultMemberAvatar}
               alt='avatar'
             />
 
             {/* Avatar Edit Button */}
             <img
-              className='absolute w-12 h-12 bottom-0 right-0 cursor-pointer '
+              className='absolute w-12 h-12 mr-2 mb-2 bottom-0 right-0 cursor-pointer shadow-[5px_5px_10px_rgba(0,0,0,0.6)] rounded-full  '
               src={EditPhotoIcon}
               alt='Edit'
             />
