@@ -33,11 +33,11 @@ const BandInfo = (props: Props) => {
           {/* Info */}
           <div className='flex items-center w-full justify-center relative pb-14 '>
             <img
-              className='w-10 absolute left-0 ml-16 h-10 cursor-pointer  rounded-full border-2 border-gray-200 '
+              className='w-10 absolute left-0 ml-[3.3rem] h-10 cursor-pointer  rounded-full border-2 border-gray-200 '
               src={EditButtonIcon}
               alt='avatar'
             />
-            <div className='w-[80%] text-justify h-[350px]  overflow-y-scroll px-6  scrollbar-thin  scrollbar-thumb-blue-200 scrollbar-track-gray-600 scrollbar-thumb-rounded-full scrollbar-track-rounded-full'>
+            <div className='w-[80%] text-justify h-[350px]  overflow-y-scroll pr-10  scrollbar-thin  scrollbar-thumb-blue-200 scrollbar-track-gray-600 scrollbar-thumb-rounded-full scrollbar-track-rounded-full'>
               <p className=''>
                 დაწყვილების პერიოდი ზომიერ და არქტიკულ რეგიონებში მობინადრე
                 დათვებისთვის, ჩვეულებრივ, გაზაფხულია. მაკეობა ხანმოკლეა, თუმცა
