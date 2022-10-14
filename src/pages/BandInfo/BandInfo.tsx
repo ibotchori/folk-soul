@@ -15,7 +15,7 @@ const BandInfo = (props: Props) => {
               ბენდის შესახებ
             </p>
             {/* Image */}
-            <div className='relative mt-5  items-center flex justify-center '>
+            <div className='relative mt-5 pb-10 bg-[#FBFBFB] z-10 w-[98%] m-auto items-center flex justify-center '>
               {/* Avatar Image */}
               <img
                 className='sm:w-44 w-32  sm:h-44 h-32  rounded-full border-2 border-gray-200   '
@@ -25,7 +25,7 @@ const BandInfo = (props: Props) => {
 
               {/* Avatar Edit Button */}
               <img
-                className='absolute w-12 h-12 ml-32 mt-24 cursor-pointer shadow-[5px_5px_10px_rgba(0,0,0,0.6)] rounded-full  '
+                className='absolute w-12 h-12 z-10 ml-32 mt-24 cursor-pointer shadow-[5px_5px_10px_rgba(0,0,0,0.6)] rounded-full  '
                 src={EditPhotoIcon}
                 alt='Edit'
               />
@@ -33,14 +33,14 @@ const BandInfo = (props: Props) => {
           </div>
 
           {/* Info */}
-          <div className='flex items-center w-full justify-center relative pb-20 '>
+          <div className='flex items-center w-full justify-center relative  '>
             <img
-              className='w-10 absolute left-0 ml-[3.3rem] h-10 cursor-pointer  rounded-full border-2 border-gray-200 '
+              className='w-10 absolute left-0 ml-[3.3rem] mt-48 h-10 cursor-pointer  rounded-full border-2 border-gray-200 '
               src={EditButtonIcon}
               alt='avatar'
             />
-            <div className='w-[80%] pt-48 text-sm text-justify h-[500px]  overflow-y-scroll pr-10  scrollbar-thin  scrollbar-thumb-blue-200 scrollbar-track-gray-600 scrollbar-thumb-rounded-full scrollbar-track-rounded-full'>
-              <p className=''>
+            <div className='w-[80%] pt-52 text-sm text-justify h-[500px]  overflow-y-scroll pr-16  scrollbar-thin  scrollbar-thumb-blue-200 scrollbar-track-gray-600 scrollbar-thumb-rounded-full scrollbar-track-rounded-full'>
+              <p className='px-3'>
                 თვალაუხელელნი, უკბილონი და ბეწვის გარეშე იბადებიან. პატარები
                 რჩებიან რა ბუნაგში დედასთან, მისი ნოყიერი რძით იკვებებიან და
                 სწრაფად იზრდებიან. როდესაც გაზაფხულზე ისინი ბარბაცით გამოდიან
