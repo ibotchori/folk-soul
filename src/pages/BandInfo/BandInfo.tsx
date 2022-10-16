@@ -10,30 +10,33 @@ const BandInfo = (props: Props) => {
       <div className='flex justify-center md:justify-end items-center h-screen md:mr-24 w-full '>
         {/* Content */}
         <div className='w-[77%] relative  h-[70vh] md:h-[80vh]  bg-[#FBFBFB] rounded-2xl flex flex-col justify-evenly items-center shadow-[inset_8px_8px_10px_0_rgba(0,0,0,0.3)]'>
+          <div className='absolute top-0 w-[80%]  '>
+            <p className='font-[mtavruli] text-lg pt-10 pb-3 w-full  tracking-widest  text-center border-b-2 border-gray-600  '>
+              {!editContent
+                ? 'ბენდის შესახებ'
+                : 'ბენდის შესახებ - დაარედაქტირე'}
+            </p>
+            {/* Image */}
+            {!editContent && (
+              <div className='relative mt-5 pb-10 bg-[#FBFBFB] z-10 w-[98%] m-auto items-center flex justify-center '>
+                {/* Avatar Image */}
+                <img
+                  className='sm:w-44 w-32  sm:h-44 h-32  rounded-full border-2 border-gray-200   '
+                  src={DefaultMemberAvatar}
+                  alt='avatar'
+                />
+
+                {/* Avatar Edit Button */}
+                <img
+                  className='absolute w-12 h-12 z-10 ml-32 mt-24 cursor-pointer shadow-[5px_5px_10px_rgba(0,0,0,0.6)] rounded-full  '
+                  src={EditPhotoIcon}
+                  alt='Edit'
+                />
+              </div>
+            )}
+          </div>
           {!editContent ? (
             <>
-              <div className='absolute top-0 w-[80%]  '>
-                <p className='font-[mtavruli] text-lg pt-10 pb-3 w-full  tracking-widest  text-center border-b-2 border-gray-600  '>
-                  ბენდის შესახებ
-                </p>
-                {/* Image */}
-                <div className='relative mt-5 pb-10 bg-[#FBFBFB] z-10 w-[98%] m-auto items-center flex justify-center '>
-                  {/* Avatar Image */}
-                  <img
-                    className='sm:w-44 w-32  sm:h-44 h-32  rounded-full border-2 border-gray-200   '
-                    src={DefaultMemberAvatar}
-                    alt='avatar'
-                  />
-
-                  {/* Avatar Edit Button */}
-                  <img
-                    className='absolute w-12 h-12 z-10 ml-32 mt-24 cursor-pointer shadow-[5px_5px_10px_rgba(0,0,0,0.6)] rounded-full  '
-                    src={EditPhotoIcon}
-                    alt='Edit'
-                  />
-                </div>
-              </div>
-
               {/* Info */}
               <div className='flex items-center w-full justify-center relative  '>
                 <img
