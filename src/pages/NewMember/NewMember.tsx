@@ -34,7 +34,7 @@ const NewMember = (props: Props) => {
         </div>
         {/* Add new member button */}
         <div className='flex flex-col gap-3 pb-3 md:pb-10'>
-          <Button text='დაამატე წევრი' backgroundColor='bg-primaryBG' />
+          <Button text='დაამატე წევრი' className='bg-primaryBG' />
           <LinkButton text='გადი უკან' path={-1} />
         </div>
       </div>

@@ -100,11 +100,7 @@ const BandInfo = (props: Props) => {
             </>
           ) : (
             <div onClick={() => setEditContent(false)}>
-              <Button
-                text='შეინახე'
-                backgroundColor='bg-green-600'
-                height='h-10'
-              />
+              <Button text='შეინახე' className='bg-green-600 h-10' />
               <LinkButton text='გადი უკან' path={'/band-info'} />
             </div>
           )}

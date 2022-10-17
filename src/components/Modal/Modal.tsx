@@ -52,7 +52,7 @@ const Modal: React.FC<ModalProps> = ({
             />
           </div>
           {/* Upload button */}
-          <Button text='ატვირთე' backgroundColor='bg-primaryBG' />
+          <Button text='ატვირთე' className='bg-primaryBG' />
         </div>
       </div>
     </div>

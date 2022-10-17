@@ -23,10 +23,7 @@ const NewSocialLink = (props: Props) => {
         </div>
         {/* Add new member button */}
         <div className='flex flex-col gap-3 pb-3 md:pb-40'>
-          <Button
-            text='დაამატე სოციალური ბმული'
-            backgroundColor='bg-primaryBG'
-          />
+          <Button text='დაამატე სოციალური ბმული' className='bg-primaryBG' />
           <LinkButton text='გადი უკან' className='pt-8' path={-1} />
         </div>
       </div>
