@@ -1,5 +1,5 @@
 import { DefaultMemberAvatar, EditButtonIcon, EditPhotoIcon } from 'assets'
-import { Button, Title } from 'components'
+import { Button, LinkButton, Title } from 'components'
 import React, { useState } from 'react'
 
 type Props = {}
@@ -105,6 +105,7 @@ const BandInfo = (props: Props) => {
                 backgroundColor='bg-green-600'
                 height='h-10'
               />
+              <LinkButton text='გადი უკან' path={'/band-info'} />
             </div>
           )}
         </div>
