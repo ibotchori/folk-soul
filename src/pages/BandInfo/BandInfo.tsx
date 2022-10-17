@@ -1,4 +1,5 @@
 import { DefaultMemberAvatar, EditButtonIcon, EditPhotoIcon } from 'assets'
+import { Title } from 'components'
 import React, { useState } from 'react'
 
 type Props = {}
@@ -11,11 +12,15 @@ const BandInfo = (props: Props) => {
         {/* Content */}
         <div className='w-[77%] relative  h-[70vh] md:h-[80vh]  bg-[#FBFBFB] rounded-2xl flex flex-col justify-evenly items-center shadow-[inset_8px_8px_10px_0_rgba(0,0,0,0.3)]'>
           <div className='absolute top-0 w-[80%]  '>
-            <p className='font-[mtavruli] text-lg pt-10 pb-3 w-full  tracking-widest  text-center border-b-2 border-gray-600  '>
-              {!editContent
-                ? 'ბენდის შესახებ'
-                : 'ბენდის შესახებ - დაარედაქტირე'}
-            </p>
+            {!editContent ? (
+              <Title className='pt-20  text-lg !w-full' text='ბენდის შესახებ' />
+            ) : (
+              <Title
+                className='pt-20 text-lg pb- !w-full'
+                text='ბენდის შესახებ - დაარედაქტირე'
+              />
+            )}
+
             {/* Image */}
             {!editContent && (
               <div className='relative mt-5 pb-10 bg-[#FBFBFB] z-10 w-[98%] m-auto items-center flex justify-center '>
@@ -45,7 +50,7 @@ const BandInfo = (props: Props) => {
                   src={EditButtonIcon}
                   alt='avatar'
                 />
-                <div className='w-[80%] pt-52 text-sm text-justify h-[500px]  overflow-y-scroll pr-16  scrollbar-thin  scrollbar-thumb-blue-200 scrollbar-track-gray-600 scrollbar-thumb-rounded-full scrollbar-track-rounded-full'>
+                <div className='w-[80%] pt-52 text-sm text-justify h-[470px]  overflow-y-scroll pr-16  scrollbar-thin  scrollbar-thumb-blue-200 scrollbar-track-gray-600 scrollbar-thumb-rounded-full scrollbar-track-rounded-full'>
                   <p className='px-3'>
                     თვალაუხელელნი, უკბილონი და ბეწვის გარეშე იბადებიან. პატარები
                     რჩებიან რა ბუნაგში დედასთან, მისი ნოყიერი რძით იკვებებიან და
