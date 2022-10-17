@@ -1,5 +1,5 @@
 import { DefaultMemberAvatar, EditButtonIcon, EditPhotoIcon } from 'assets'
-import { Title } from 'components'
+import { Button, Title } from 'components'
 import React, { useState } from 'react'
 
 type Props = {}
@@ -99,7 +99,13 @@ const BandInfo = (props: Props) => {
               </div>
             </>
           ) : (
-            <div onClick={() => setEditContent(false)}>edit</div>
+            <div onClick={() => setEditContent(false)}>
+              <Button
+                text='შეინახე'
+                backgroundColor='bg-green-600'
+                height='h-10'
+              />
+            </div>
           )}
         </div>
       </div>
