@@ -99,8 +99,8 @@ const BandInfo = (props: Props) => {
               </div>
             </>
           ) : (
-            <div onClick={() => setEditContent(false)}>
-              <Button text='შეინახე' className='bg-green-600 h-10' />
+            <div className='flex flex-col'>
+              <Button text='შეინახე' className='bg-[#53C02C] h-10 mb-4 px-12' />
               <LinkButton text='გადი უკან' path={'/band-info'} />
             </div>
           )}
