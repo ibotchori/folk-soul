@@ -1,6 +1,7 @@
 import { Layout } from 'components'
 import {
   BandInfo,
+  BandInfoEdit,
   Dashboard,
   Landing,
   Login,
@@ -24,6 +25,7 @@ function App() {
           <Route path='/social-links' element={<SocialLinks />} />
           <Route path='/social-links/new' element={<NewSocialLink />} />
           <Route path='/band-info' element={<BandInfo />} />
+          <Route path='/band-info/edit' element={<BandInfoEdit />} />
         </Route>
       </Routes>
     </BrowserRouter>

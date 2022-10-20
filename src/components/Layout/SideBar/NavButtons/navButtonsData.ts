@@ -31,6 +31,7 @@ export const navButtonsData = [
     id: 4,
     label: 'ბენდის შესახებ',
     path: '/band-info',
+    nestedPath: '/band-info/edit',
     icon: MusicalKeyIcon,
   },
   {
