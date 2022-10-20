@@ -99,9 +99,19 @@ const BandInfo = (props: Props) => {
               </div>
             </>
           ) : (
-            <div className='flex flex-col'>
-              <Button text='შეინახე' className='bg-[#53C02C] h-10 mb-4 px-12' />
-              <LinkButton text='გადი უკან' path={'/band-info'} />
+            <div className='flex flex-col w-full items-center pt-32 '>
+              <div className=' w-[80%] mb-8  h-[460px] bg-[#E5E5E5] rounded-lg shadow-[5px_5px_15px_5px_rgba(0,0,0,0.35)]'>
+                {' '}
+              </div>
+              <div className='absolute w-full inset-x-0 bottom-0 '>
+                <div className=' flex flex-col items-center justify-center pb-'>
+                  <Button
+                    text='შეინახე'
+                    className='bg-[#53C02C] h-10 mb-4 px-12'
+                  />
+                  <LinkButton text='გადი უკან' path={'/band-info'} />
+                </div>
+              </div>
             </div>
           )}
         </div>
