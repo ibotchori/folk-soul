@@ -1,11 +1,20 @@
 import { DefaultMemberAvatar, EditButtonIcon, EditPhotoIcon } from 'assets'
 import { Button, LinkButton, Title } from 'components'
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 type Props = {}
 
 const BandInfo = (props: Props) => {
   const [editContent, setEditContent] = useState(false)
+
+  const navigate = useNavigate()
+
+  const onClickHandler = () => {
+    navigate('/band-info/edit')
+    setEditContent(true)
+  }
+
   return (
     <>
       <div className='flex justify-center md:justify-end items-center h-screen md:mr-24 w-full '>
@@ -45,7 +54,7 @@ const BandInfo = (props: Props) => {
               {/* Info */}
               <div className='flex items-center w-full justify-center relative  '>
                 <img
-                  onClick={() => setEditContent(true)}
+                  onClick={onClickHandler}
                   className='w-10 absolute left-0 ml-[3.3rem] mt-48 h-10 cursor-pointer  rounded-full border-2 border-gray-200 '
                   src={EditButtonIcon}
                   alt='avatar'
