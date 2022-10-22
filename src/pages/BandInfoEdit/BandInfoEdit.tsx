@@ -16,7 +16,7 @@ const BandInfoEdit = (props: Props) => {
           />
         </div>
 
-        <div className=' w-[80%] mb-8 mt-5 h-[460px] bg-[#E5E5E5] rounded-lg shadow-[5px_5px_15px_5px_rgba(0,0,0,0.35)]'></div>
+        <div className=' w-[80%] mb-8 mt-5 h-[460px] bg-[#E5E5E5] rounded-lg shadow-[5px_5px_15px_5px_rgba(0,0,0,0.5)]'></div>
 
         <div className=' flex flex-col items-center justify-center pb-5'>
           <Button text='შეინახე' className='bg-[#53C02C] h-10 mb-4 px-12' />
