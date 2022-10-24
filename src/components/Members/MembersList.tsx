@@ -13,6 +13,7 @@ import ReactPaginate from 'react-paginate'
 import './Pagination.css'
 import useWindowDimensions from 'hooks/useWindowDimensions'
 import Modal from 'components/Modal/Modal'
+import MembersModal from './MembersModal/MembersModal'
 type Props = {}
 
 const MembersList = (props: Props) => {
@@ -56,7 +57,7 @@ const MembersList = (props: Props) => {
           <p className='font-[mtavruli]'>{member.title}</p>
           <div className=' w-full text-center h-10 border-t-2 border-black'>
             <div className='flex justify-between px-5 pt-2 items-center'>
-              <button>
+              <button onClick={() => setShowModal(true)}>
                 <img src={SeeIcon} alt='See Icon' />
               </button>
               <button>
@@ -89,6 +90,13 @@ const MembersList = (props: Props) => {
         nextLinkClassName={'nextButton'}
       />
       <Modal
+        onClose={handleOnClose}
+        image={DefaultMemberAvatar}
+        className='rounded-full'
+        visible={showModal}
+        title={'შეცვალე ჯგუფის წევრის ავატარი'}
+      />
+      <MembersModal
         onClose={handleOnClose}
         image={DefaultMemberAvatar}
         className='rounded-full'
