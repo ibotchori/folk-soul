@@ -74,6 +74,7 @@ const MembersList = (props: Props) => {
             className='rounded-full'
             visible={showMembersModal}
             title={'ტესტ'}
+            orbitDistance={12}
           />
         </>
       )

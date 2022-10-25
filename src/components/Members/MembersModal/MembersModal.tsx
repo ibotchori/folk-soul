@@ -8,6 +8,7 @@ type MembersModalProps = {
   subTitle?: string
   image?: any
   className?: string
+  orbitDistance: number
 }
 
 const MembersModal: React.FC<MembersModalProps> = ({
@@ -16,6 +17,7 @@ const MembersModal: React.FC<MembersModalProps> = ({
   className,
   image,
   visible,
+  orbitDistance,
   onClose,
 }) => {
   if (!visible) return null
@@ -49,7 +51,9 @@ const MembersModal: React.FC<MembersModalProps> = ({
             />
           </div>
           {/* Sub Title */}
-          <h4 className='pb-6 font-[mtavruli]'>ორბიტიალური დაშორება: {12}</h4>
+          <h4 className='pb-6 font-[mtavruli]'>
+            ორბიტიალური დაშორება: {orbitDistance}
+          </h4>
           <p className=''>
             თეთრი დათვის ხშირი ბეწვი ძალიან ღია ყვითელი ფერისაა იმისათვის, რომ
             შეერწყას თოვლიან გარემოს. კიდურების მიდამოებში ბეწვი გრძელია, რაც
