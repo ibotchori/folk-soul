@@ -43,7 +43,7 @@ const MembersModal: React.FC<MembersModalProps> = ({
           {/* Avatar Image */}
           <div className='relative py-6'>
             <img
-              className={`shadow-[15px_15px_15px_rgba(0,0,0,0.35)]  md:w-52 w-32  md:h-52 h-32  border-2 border-gray-200 ${className}`}
+              className={`shadow-[15px_15px_15px_rgba(0,0,0,0.35)]  w-32  h-32   border-2 border-gray-200 ${className}`}
               src={image}
               alt='avatar'
             />
