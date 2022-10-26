@@ -55,7 +55,7 @@ const MembersModal: React.FC<MembersModalProps> = ({
             <h4 className='pb-6 font-[mtavruli]'>
               ორბიტიალური დაშორება: {orbitDistance}
             </h4>
-            <p className=''>
+            <p className='text-justify'>
               თეთრი დათვის ხშირი ბეწვი ძალიან ღია ყვითელი ფერისაა იმისათვის, რომ
               შეერწყას თოვლიან გარემოს. კიდურების მიდამოებში ბეწვი გრძელია, რაც
               ეხმარება დათვს სრიალა ყინულზე გადაადგილებისას. თეთრ დათვს დიდი
