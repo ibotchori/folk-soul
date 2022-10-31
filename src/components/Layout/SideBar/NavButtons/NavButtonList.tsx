@@ -10,6 +10,7 @@ const NavItemsList = (props: Props) => {
       {navButtonsData.map((navItem: any) => {
         return (
           <Link
+            key={navItem.id}
             to={navItem.path}
             className={`flex items-center w-full h-[3rem] pl-6 pt-[0.4rem] hover:bg-white hover:text-black  ${
               location.pathname === navItem.path ||
