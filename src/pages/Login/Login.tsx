@@ -1,14 +1,14 @@
 import { useAppDispatch, useAppSelector } from 'app/hooks'
 import { Input } from 'components'
-import { allMembers, getMembers } from 'features/auth/authSlice'
+import { user, login } from 'features/auth/authSlice'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
 type Props = {}
 
 const Login = (props: Props) => {
-  const members = useAppSelector(allMembers)
-  console.log('🚀 ~ Login ~ members', members)
+  const globalUser = useAppSelector(user)
+  console.log('🚀 ~ Login ~ user', globalUser)
   const dispatch = useAppDispatch()
   return (
     <div className='  items-center justify-center flex w-full h-full'>
@@ -22,7 +22,7 @@ const Login = (props: Props) => {
         <Input id='password' placeholder='პაროლი' type='password' />
 
         <Link
-          onClick={() => dispatch(getMembers())}
+          onClick={() => dispatch(login())}
           to={'/dashboard'}
           className='bg-[#10191d] border pt-4 rounded-md text-gray-300 border-gray-300  w-60 h-14 text-center font-[mtavruli]  tracking-wider'
         >
