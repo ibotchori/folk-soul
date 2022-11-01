@@ -3,13 +3,15 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import { getAllMembers } from './authService'
 import { RootState } from '../../app/store'
 
-export interface CounterState {
+export interface authStateInterface {
   value: []
+  error: any
   status: 'idle' | 'loading' | 'failed'
 }
 
-const initialState: CounterState = {
+const initialState: authStateInterface = {
   value: [],
+  error: '',
   status: 'idle',
 }
 
@@ -18,11 +20,16 @@ const initialState: CounterState = {
 // will call the thunk with the `dispatch` function as the first argument. Async
 // code can then be executed and other actions can be dispatched. Thunks are
 // typically used to make async requests.
-export const getMembers = createAsyncThunk('auth/getAllMembers', async () => {
-  const response = await getAllMembers()
-  // The value we return becomes the `fulfilled` action payload
-  return response
-})
+export const getMembers = createAsyncThunk(
+  'auth/getAllMembers',
+  async (_, { rejectWithValue }) => {
+    try {
+      return await await getAllMembers()
+    } catch (error: any) {
+      return rejectWithValue(error.message)
+    }
+  }
+)
 
 export const authSlice = createSlice({
   name: 'auth',
@@ -47,8 +54,9 @@ export const authSlice = createSlice({
         state.status = 'idle'
         state.value = action.payload
       })
-      .addCase(getMembers.rejected, (state) => {
+      .addCase(getMembers.rejected, (state, action) => {
         state.status = 'failed'
+        state.error = action.payload
       })
   },
 })
