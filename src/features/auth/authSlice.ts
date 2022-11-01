@@ -1,9 +1,10 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
 import { getAllMembers } from './authService'
+import { RootState } from '../../app/store'
 
 export interface CounterState {
-  value: any
+  value: []
   status: 'idle' | 'loading' | 'failed'
 }
 
@@ -20,7 +21,7 @@ const initialState: CounterState = {
 export const getMembers = createAsyncThunk('auth/getAllMembers', async () => {
   const response = await getAllMembers()
   // The value we return becomes the `fulfilled` action payload
-  return response.data
+  return response
 })
 
 export const authSlice = createSlice({
@@ -33,7 +34,6 @@ export const authSlice = createSlice({
       // doesn't actually mutate the state because it uses the Immer library,
       // which detects changes to a "draft state" and produces a brand new
       // immutable state based off those changes
-      state.value += 1
     },
   },
   // The `extraReducers` field lets the slice handle actions defined elsewhere,
@@ -54,5 +54,7 @@ export const authSlice = createSlice({
 })
 
 export const { test } = authSlice.actions
+
+export const allMembers = (state: RootState) => state.auth
 
 export default authSlice.reducer
