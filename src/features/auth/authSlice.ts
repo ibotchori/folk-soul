@@ -4,28 +4,59 @@ import authService from './authService'
 import { RootState } from '../../app/store'
 
 export interface authStateInterface {
+  user: any
   token: string
   error: any
   status: 'idle' | 'loading' | 'failed'
 }
 
 const initialState: authStateInterface = {
+  user: {},
   token: '',
   error: '',
   status: 'idle',
 }
+
+// Register user
+export const register = createAsyncThunk(
+  'auth/register',
+  async (_, { rejectWithValue }) => {
+    try {
+      return await authService.register({
+        username: 'kosaaaaata',
+        password: '123123',
+        repeatPassword: '123123',
+      })
+    } catch (error: any) {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString()
+      return rejectWithValue(message)
+    }
+  }
+)
 
 // Login user
 export const login = createAsyncThunk(
   'auth/login',
   async (_, { rejectWithValue }) => {
     try {
-      return await await authService.login({
+      return await authService.login({
         username: 'daniel',
         password: '123123',
       })
     } catch (error: any) {
-      return rejectWithValue(error.message)
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString()
+
+      return rejectWithValue(message)
     }
   }
 )
@@ -36,6 +67,7 @@ export const authSlice = createSlice({
 
   reducers: {
     reset: (state) => {
+      state.user = {}
       state.token = ''
       state.error = ''
       state.status = 'idle'
@@ -52,6 +84,17 @@ export const authSlice = createSlice({
         state.token = action.payload
       })
       .addCase(login.rejected, (state, action) => {
+        state.status = 'failed'
+        state.error = action.payload
+      })
+      .addCase(register.pending, (state) => {
+        state.status = 'loading'
+      })
+      .addCase(register.fulfilled, (state, action) => {
+        state.status = 'idle'
+        state.user = action.payload
+      })
+      .addCase(register.rejected, (state, action) => {
         state.status = 'failed'
         state.error = action.payload
       })

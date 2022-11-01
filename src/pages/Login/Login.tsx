@@ -1,6 +1,6 @@
 import { useAppDispatch, useAppSelector } from 'app/hooks'
 import { Input } from 'components'
-import { user, login } from 'features/auth/authSlice'
+import { user, login, register } from 'features/auth/authSlice'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
@@ -28,6 +28,7 @@ const Login = (props: Props) => {
         >
           შემობრძანდი
         </Link>
+        <button onClick={() => dispatch(register())}>Register</button>
       </div>
     </div>
   )
