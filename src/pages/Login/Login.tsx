@@ -17,7 +17,7 @@ const Login = (props: Props) => {
     if (globalUser.token !== '') {
       navigate('/dashboard')
     }
-  }, [])
+  }, [globalUser, navigate])
   // useForm
   const {
     register,
