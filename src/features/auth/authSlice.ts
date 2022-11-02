@@ -12,7 +12,7 @@ export interface authStateInterface {
 
 const initialState: authStateInterface = {
   user: {},
-  token: '',
+  token: '12312312',
   error: '',
   status: 'idle',
 }
