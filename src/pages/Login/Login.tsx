@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Input } from 'components'
 import React from 'react'
 import { Link } from 'react-router-dom'
@@ -28,8 +29,20 @@ const Login = (props: Props) => {
             კარიბჭე
           </p>
         </div>
-        <Input id='username' placeholder='მეტსახელი' type='text' />
-        <Input id='password' placeholder='პაროლი' type='password' />
+        <Input
+          name='username'
+          id='username'
+          placeholder='მეტსახელი'
+          type='text'
+          register={register}
+        />
+        <Input
+          name='password'
+          id='password'
+          placeholder='პაროლი'
+          type='password'
+          register={register}
+        />
 
         <Link
           to={'/dashboard'}
