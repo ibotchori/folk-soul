@@ -1,10 +1,20 @@
 import { BandLogo, Facebook, Twitter, Youtube } from 'assets'
-import { Link } from 'react-router-dom'
-import React from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { useAppSelector } from 'app/hooks'
+import { user } from 'features/auth/authSlice'
 
 type Props = {}
 
 const Landing = (props: Props) => {
+  const navigate = useNavigate()
+  const globalUser = useAppSelector(user)
+  useEffect(() => {
+    if (globalUser.token !== '') {
+      navigate('/dashboard')
+    }
+  }, [])
+
   return (
     <div className='w-full px-7 lg:px-20 pt-4'>
       {/* Header */}
