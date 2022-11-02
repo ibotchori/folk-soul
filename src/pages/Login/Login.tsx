@@ -1,14 +1,23 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Input } from 'components'
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { LoginInputTypes, LoginSchema } from 'Schema/LoginSchema'
+import { useAppSelector } from 'app/hooks'
+import { user } from 'features/auth/authSlice'
 
 type Props = {}
 
 const Login = (props: Props) => {
+  const navigate = useNavigate()
+  const globalUser = useAppSelector(user)
+  useEffect(() => {
+    if (globalUser.token !== '') {
+      navigate('/dashboard')
+    }
+  }, [])
   // useForm
   const {
     register,
