@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
 import authService from './authService'
 import { RootState } from '../../app/store'
+import { LoginInputTypes } from 'Schema/LoginSchema'
 
 export interface authStateInterface {
   user: any
@@ -12,7 +13,7 @@ export interface authStateInterface {
 
 const initialState: authStateInterface = {
   user: {},
-  token: '12312312',
+  token: '',
   error: '',
   status: 'idle',
 }
@@ -42,12 +43,9 @@ export const register = createAsyncThunk(
 // Login user
 export const login = createAsyncThunk(
   'auth/login',
-  async (_, { rejectWithValue }) => {
+  async (userData: LoginInputTypes, { rejectWithValue }) => {
     try {
-      return await authService.login({
-        username: 'daniel',
-        password: '123123',
-      })
+      return await authService.login(userData)
     } catch (error: any) {
       const message =
         (error.response &&
