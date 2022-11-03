@@ -37,20 +37,16 @@ const Login = (props: Props) => {
   })
 
   const onSubmit = async (data: LoginInputTypes) => {
-    const dataForSubmit = {
-      username: 'daniel',
-      password: '123123',
-    }
-
     try {
       // HTTP request from service file
 
-      const result = await dispatch(login(dataForSubmit))
+      const result = await dispatch(login(data))
 
       setUsernameErrorFromAPI(false)
       setPasswordErrorFromAPI(false)
       reset()
       navigate('/dashboard')
+
       console.log(result)
     } catch (err: any) {
       // Handle Error Here
