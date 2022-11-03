@@ -10,10 +10,10 @@ const Landing = (props: Props) => {
   const navigate = useNavigate()
   const globalUser = useAppSelector(user)
   useEffect(() => {
-    if (globalUser.token !== '') {
+    if (localStorage.getItem('token')) {
       navigate('/dashboard')
     }
-  }, [])
+  }, [globalUser, navigate])
 
   return (
     <div className='w-full px-7 lg:px-20 pt-4'>

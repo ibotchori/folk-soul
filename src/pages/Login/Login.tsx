@@ -19,7 +19,7 @@ const Login = (props: Props) => {
 
   const dispatch = useAppDispatch()
   useEffect(() => {
-    if (globalUser.token !== '') {
+    if (localStorage.getItem('token')) {
       navigate('/dashboard')
     }
   }, [globalUser, navigate])
