@@ -38,15 +38,16 @@ const Login = (props: Props) => {
 
   const onSubmit = async (data: LoginInputTypes) => {
     try {
-      // HTTP request from service file
-
-      const result = await dispatch(login(data))
-      localStorage.setItem('token', JSON.stringify(result.payload))
-
-      setUsernameErrorFromAPI(false)
-      setPasswordErrorFromAPI(false)
-      reset()
-      navigate('/dashboard')
+      // HTTP request from redux
+      const result: any = await dispatch(login(data))
+      // save token if no error
+      if (!result.error) {
+        localStorage.setItem('token', JSON.stringify(result.payload))
+        setUsernameErrorFromAPI(false)
+        setPasswordErrorFromAPI(false)
+        reset()
+        navigate('/dashboard')
+      }
 
       console.log(result)
     } catch (err: any) {
