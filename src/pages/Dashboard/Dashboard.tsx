@@ -1,19 +1,9 @@
-import { useAppSelector } from 'app/hooks'
 import { TVicon } from 'assets'
-import React, { useEffect } from 'react'
-import { user } from 'features/auth/authSlice'
+import React from 'react'
 
 type Props = {}
 
 const Dashboard = (props: Props) => {
-  const globalUser = useAppSelector(user)
-  useEffect(() => {
-    if (globalUser.token) {
-      // save token to local storage
-      localStorage.setItem('token', globalUser.token)
-    }
-  }, [globalUser])
-
   return (
     <div className='flex justify-center md:justify-end items-center h-screen md:mr-24 w-full '>
       {/* Content */}

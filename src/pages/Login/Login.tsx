@@ -41,6 +41,7 @@ const Login = (props: Props) => {
       // HTTP request from service file
 
       const result = await dispatch(login(data))
+      localStorage.setItem('token', JSON.stringify(result.payload))
 
       setUsernameErrorFromAPI(false)
       setPasswordErrorFromAPI(false)
