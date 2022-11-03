@@ -8,8 +8,10 @@ type Props = {}
 const Dashboard = (props: Props) => {
   const globalUser = useAppSelector(user)
   useEffect(() => {
-    // save token to local storage
-    localStorage.setItem('token', globalUser.token)
+    if (globalUser.token) {
+      // save token to local storage
+      localStorage.setItem('token', globalUser.token)
+    }
   }, [globalUser])
 
   return (
