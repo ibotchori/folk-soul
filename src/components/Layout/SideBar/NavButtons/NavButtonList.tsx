@@ -12,6 +12,7 @@ const NavItemsList = (props: Props) => {
   const logOut = (path: string) => {
     if (path === '/') {
       dispatch(reset())
+      localStorage.removeItem('token')
     }
   }
   return (
