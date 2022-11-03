@@ -80,6 +80,7 @@ export const authSlice = createSlice({
       .addCase(login.fulfilled, (state, action) => {
         state.status = 'idle'
         state.token = action.payload
+        state.error = ''
       })
       .addCase(login.rejected, (state, action) => {
         state.status = 'failed'
@@ -91,6 +92,7 @@ export const authSlice = createSlice({
       .addCase(register.fulfilled, (state, action) => {
         state.status = 'idle'
         state.user = action.payload
+        state.error = ''
       })
       .addCase(register.rejected, (state, action) => {
         state.status = 'failed'
