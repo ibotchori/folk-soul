@@ -14,7 +14,9 @@ const Layout = (props: Props) => {
       ) : (
         <SideBar />
       )}
-
+      <p className='items-center text-center w-full absolute text-red-500'>
+        Web page is under development
+      </p>
       <Outlet />
     </div>
   )
