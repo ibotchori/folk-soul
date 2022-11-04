@@ -16,7 +16,7 @@ const Landing = (props: Props) => {
   }, [globalUser, navigate])
 
   return (
-    <div className='w-full px-7 lg:px-20 pt-4'>
+    <div className='w-full px-7 lg:px-20 pt-4 h-screen'>
       {/* Header */}
       <section className='flex justify-between '>
         <img src={BandLogo} alt='Band-Logo' className='w-32 ' />
@@ -29,7 +29,7 @@ const Landing = (props: Props) => {
         {/* Member's Planet and Sun - Left side */}
         <div className='w-1/2 bg-slate-100 h-56'>member animation</div>
         {/* Info - Right side */}
-        <div className='w-1/2 flex justify-between flex-col items-end  '>
+        <div className='w-1/2 flex justify-between flex-col items-end '>
           <div className='flex justify-between flex-col items-center'>
             {/*  Logo Image */}
             <div className='absolute bg-gradient-to-r from-[#342C46] via-[#534571] to-[#342C46] w-60 h-60 rounded-full items-center flex border-2 border-gray-200 shadow-xl'>
@@ -38,7 +38,7 @@ const Landing = (props: Props) => {
             {/* <div className='absolute bg-cover bg-center bg-[url("https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80")] w-60 h-60 rounded-full items-center flex border-2 border-gray-200 shadow-xl'></div> */}
 
             {/* Band Member Info */}
-            <div className='w-[450px] h-[330px] xl:w-[550px] xl:h-[450px] bg-[#FBD560] rounded-lg pb-8 px-4  mt-32 flex flex-col justify-between  '>
+            <div className='w-[450px] h-[330px] xl:w-[550px] xl:h-[450px] bg-[#FBD560] rounded-lg pb-8 px-4  mt-24 flex flex-col justify-between  '>
               <div className='mb-28 mt-3 flex justify-between'>
                 <span className='bg-[#534571] rounded-full  w-3 h-3'></span>
                 <span className='bg-[#342C46] rounded-full  w-3 h-3'></span>
